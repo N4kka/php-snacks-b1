@@ -18,16 +18,16 @@ error_reporting(E_ALL);
 
     <?php
     //Define variables to get the params passed by the user
-    $param = $_GET('name');
-    $param2 = $_GET('mail');
-    $param3 = $_GET('age');
+    $name = $_GET["name"];
+    $mail = $_GET["mail"];
+    $age = $_GET["age"];
 
     //If all conditions are satisfied the access will be allowed, if not it will be denied
     if (
-        strlen($param) > 3 &&
-        strpos($param2, '@') &&
-        strpos($param2, '.') &&
-        is_numeric($param3)
+        strlen($name) > 3 &&
+        strpos($mail, '@') &&
+        strpos($mail, '.') &&
+        is_numeric($age)
     ) {
         echo 'Access allowed';
     } else {
